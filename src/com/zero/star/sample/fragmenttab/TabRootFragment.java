@@ -56,7 +56,13 @@ public class TabRootFragment extends Fragment {
      * @param rootClass 初期Fragmentクラス名
      */
     private void initFragment(String rootClass) {
+
         FragmentManager fragmentManager = getChildFragmentManager();
+        if (fragmentManager.findFragmentById(R.id.fragment) != null) {
+            // すでにFragmentを設定してある場合は何もしない
+            return;
+        }
+
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         Fragment fragment = Fragment.instantiate(getActivity(), rootClass);

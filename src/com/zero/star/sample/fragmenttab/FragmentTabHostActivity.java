@@ -11,7 +11,7 @@ import android.widget.TabHost.TabSpec;
  * FragmentTabHostを使ったサンプルActivity.
  *
  */
-public class MainActivity extends FragmentActivity {
+public class FragmentTabHostActivity extends FragmentActivity {
 
     /** FragmentTabHost */
     private FragmentTabHost mTabHost;
@@ -19,7 +19,7 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_fragmenttabhost);
 
         initTabs();
     }
