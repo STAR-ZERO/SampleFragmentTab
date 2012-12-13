@@ -21,7 +21,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        intiTabs();
+        initTabs();
     }
 
     @Override
@@ -41,7 +41,7 @@ public class MainActivity extends FragmentActivity {
     /**
      * タブ初期化
      */
-    private void intiTabs() {
+    private void initTabs() {
 
         mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
